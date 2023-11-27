@@ -4,7 +4,7 @@
   "main": "index.js",
   "scripts": {
     "server": "json-server --watch db.json --port 5000 --middlewares ./range.js",
-    "client": "npm start --prefix ../admin-demo",
+    "client": "npm start --prefix ../admin-ui",
     "dev": "concurrently \"npm run server\" \"npm run client\""
   },
   "keywords": [],
