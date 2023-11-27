@@ -10,6 +10,21 @@ import {
   TextInput,
 } from "react-admin";
 
+export const UserCreate = () => {
+  return (
+    <Create title="Create User">
+      <SimpleForm>
+        <NumberInput source="id" />
+        <TextInput source="name" />
+        <TextInput source="username" />
+        <TextInput source="email" />
+        <TextInput source="phone" />
+        <TextInput source="company" />
+      </SimpleForm>
+    </Create>
+  );
+};
+
 export const UserEdit = () => (
   <Edit>
     <SimpleForm>
