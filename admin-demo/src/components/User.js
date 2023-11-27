@@ -42,7 +42,17 @@ export const UserEdit = () => (
 const UserList = () => {
   return (
     <List>
-      <Datagrid rowClick="edit">
+      <Datagrid
+        rowClick="edit"
+        sx={{
+          ".RaDatagrid-rowEven": {
+            backgroundColor: "lavender",
+          },
+          ".RaDatagrid-headerCell": {
+            backgroundColor: "MistyRose",
+          },
+        }}
+      >
         <TextField source="id" />
         <TextField source="name" />
         <TextField source="username" />
