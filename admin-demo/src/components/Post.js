@@ -6,6 +6,7 @@ import {
   Edit,
   List,
   NumberInput,
+  ReferenceField,
   SimpleForm,
   TextField,
   TextInput,
@@ -14,11 +15,11 @@ import {
 export const PostList = () => {
   return (
     <List>
-      <Datagrid rowClick="edit">
+      <Datagrid rowClick="show">
         <TextField source="id" />
         <TextField source="title" />
         <DateField source="publishedAt" />
-        <TextField source="userId" label="Author" />
+        <ReferenceField source="userId" label="Author" reference="users" />
       </Datagrid>
     </List>
   );
