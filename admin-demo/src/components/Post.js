@@ -1,4 +1,5 @@
 import {
+  AutocompleteInput,
   Create,
   Datagrid,
   DateField,
@@ -7,6 +8,7 @@ import {
   List,
   NumberInput,
   ReferenceField,
+  ReferenceInput,
   SimpleForm,
   TextField,
   TextInput,
@@ -30,6 +32,9 @@ export const PostCreate = () => {
     <Create title="Create a Post">
       <SimpleForm>
         <NumberInput source="id" />
+        <ReferenceInput source="userId" reference="users">
+          <AutocompleteInput label="Author" />
+        </ReferenceInput>
         <TextInput source="title" />
         <TextInput multiline source="body" />
         <DateInput label="Published" source="publishedAt" />
@@ -43,6 +48,9 @@ export const PostEdit = () => {
     <Edit>
       <SimpleForm>
         <NumberInput disabled source="id" />
+        <ReferenceInput source="userId" reference="users">
+          <AutocompleteInput label="Author" />
+        </ReferenceInput>
         <TextInput source="title" />
         <TextInput multiline source="body" />
         <DateInput label="Published" source="publishedAt" />
