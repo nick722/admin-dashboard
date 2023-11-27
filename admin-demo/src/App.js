@@ -4,6 +4,7 @@ import restProvider from "ra-data-simple-rest";
 import "./App.css";
 import UserList, { UserCreate, UserEdit } from "./components/User";
 import { authProvider } from "./authProvider";
+import { PostCreate, PostEdit, PostList } from "./components/Post";
 
 const dataProvider = restProvider("http://localhost:3000");
 
@@ -15,6 +16,12 @@ function App() {
         list={UserList}
         create={UserCreate}
         edit={UserEdit}
+      />
+      <Resource
+        name="posts"
+        list={PostList}
+        create={PostCreate}
+        edit={PostEdit}
       />
     </Admin>
   );
